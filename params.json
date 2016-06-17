@@ -1,0 +1,6 @@
+{
+  "name": "Salt-toaster",
+  "tagline": "",
+  "body": "# salt-toaster\r\n\r\n\r\n## Running tests\r\n\r\n### Run tests in default docker image:\r\n```bash\r\ngit clone https://github.com/dincamihai/salt-toaster.git\r\ncd salt-toaster\r\nmake docker_run_custom_integration_tests\r\nmake docker_run_salt_integration_tests\r\nmake docker_run_salt_unit_tests\r\n```\r\n\r\n### Examples\r\n\r\n#### Run docker shell in specific local image\r\n```bash\r\nmake docker_shell DOCKER_IMAGE=toaster-sles12sp1\r\n```\r\n\r\n#### Run docker shell in specific repository image\r\n```bash\r\nmake docker_shell DOCKER_IMAGE=registry.mgr.suse.de/toaster-sles12sp1\r\n```\r\n\r\n#### Run docker shell in repository image based on version\r\n```bash\r\nmake docker_shell VERSION=sles12sp1\r\n```\r\n\r\n## For development\r\n\r\n\r\n### Run a docker container on a specific image and install salt from a salt repository on host\r\n\r\n```bash\r\nDOCKER_IMAGE=toaster-sles12sp1 DEVEL=true SALT_REPO=/home/mdinca/repositories/salt/ make docker_shell\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

@@ -1,1 +1,80 @@
-Hello
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Salt-toaster by dincamihai</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Salt-toaster</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/dincamihai/salt-toaster">View the Project on GitHub <small>dincamihai/salt-toaster</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/dincamihai/salt-toaster/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dincamihai/salt-toaster/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dincamihai/salt-toaster">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="salt-toaster" class="anchor" href="#salt-toaster" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>salt-toaster</h1>
+
+<h2>
+<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running tests</h2>
+
+<h3>
+<a id="run-tests-in-default-docker-image" class="anchor" href="#run-tests-in-default-docker-image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run tests in default docker image:</h3>
+
+<div class="highlight highlight-source-shell"><pre>git clone https://github.com/dincamihai/salt-toaster.git
+<span class="pl-c1">cd</span> salt-toaster
+make docker_run_custom_integration_tests
+make docker_run_salt_integration_tests
+make docker_run_salt_unit_tests</pre></div>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h3>
+
+<h4>
+<a id="run-docker-shell-in-specific-local-image" class="anchor" href="#run-docker-shell-in-specific-local-image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run docker shell in specific local image</h4>
+
+<div class="highlight highlight-source-shell"><pre>make docker_shell DOCKER_IMAGE=toaster-sles12sp1</pre></div>
+
+<h4>
+<a id="run-docker-shell-in-specific-repository-image" class="anchor" href="#run-docker-shell-in-specific-repository-image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run docker shell in specific repository image</h4>
+
+<div class="highlight highlight-source-shell"><pre>make docker_shell DOCKER_IMAGE=registry.mgr.suse.de/toaster-sles12sp1</pre></div>
+
+<h4>
+<a id="run-docker-shell-in-repository-image-based-on-version" class="anchor" href="#run-docker-shell-in-repository-image-based-on-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run docker shell in repository image based on version</h4>
+
+<div class="highlight highlight-source-shell"><pre>make docker_shell VERSION=sles12sp1</pre></div>
+
+<h2>
+<a id="for-development" class="anchor" href="#for-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For development</h2>
+
+<h3>
+<a id="run-a-docker-container-on-a-specific-image-and-install-salt-from-a-salt-repository-on-host" class="anchor" href="#run-a-docker-container-on-a-specific-image-and-install-salt-from-a-salt-repository-on-host" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run a docker container on a specific image and install salt from a salt repository on host</h3>
+
+<div class="highlight highlight-source-shell"><pre>DOCKER_IMAGE=toaster-sles12sp1 DEVEL=<span class="pl-c1">true</span> SALT_REPO=/home/mdinca/repositories/salt/ make docker_shell</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/dincamihai">dincamihai</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

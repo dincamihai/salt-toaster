@@ -69,12 +69,29 @@ make docker_run_salt_unit_tests</pre></div>
 
 <div class="highlight highlight-source-shell"><pre>DOCKER_IMAGE=toaster-sles12sp1 DEVEL=<span class="pl-c1">true</span> SALT_REPO=/home/mdinca/repositories/salt/ make docker_shell</pre></div>
       </section>
+      <section>
+        <div class="mermaid">
+            sequenceDiagram
+                participant Alice
+                participant Bob
+                Alice->>John: Hello John, how are you?
+                loop Healthcheck
+                    John->>John: Fight against hypochondria
+                end
+                Note right of John: Rational thoughts <br/>prevail...
+                John-->>Alice: Great!
+                John->>Bob: How about you?
+                Bob-->>John: Jolly good!
+        </div>
+      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/dincamihai">dincamihai</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     
   </body>
 </html>
